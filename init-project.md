@@ -1,14 +1,29 @@
 # 创建仓库
 [https://github.com/JoyceWang1][1]创建repository
 # 提交仓库
-将本地提交至远程
-```bash
-echo "# learning" >> README.md
-git init
-git add README.md
-git commit -m "init my learning"
-git remote add origin https://github.com/JoyceWang1/learnuing.git
-git push -u origin master
-```
+## 首次提交
+1. 本地
+	```bash
+	echo "# learning" >> README.md
+	# 初始化目录为 git 项目
+	git init
+
+	# 添加需要管理的文件
+	git add README.md
+
+	# 本地库提交
+	git commit -m "init my learning"
+	```
+2. 远程
+	```bash
+	# 添加远程
+	git remote add origin https://github.com/JoyceWang1/learning.git
+
+	# 提交到远程
+	git push -u origin master
+
+	# 查看远程仓库
+	git remote -v
+	```
 
 [1]:	https://github.com/JoyceWang1

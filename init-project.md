@@ -8,7 +8,7 @@
 	# 初始化目录为 git 项目
 	git init
 
-	# 添加需要管理的文件
+	# 加入缓存区
 	git add README.md
 
 	# 本地库提交
@@ -24,6 +24,15 @@
 
 	# 查看远程仓库
 	git remote -v
+	```
+## 更新提交
+1. 本地
+	```bash
+
+	```
+2. 远程
+	```bash
+
 	```
 
 [1]:	https://github.com/JoyceWang1

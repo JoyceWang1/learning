@@ -1,0 +1,97 @@
+# String
+## 内容
+- 有序容器的一种，元素是有索引的 index
+- 标识
+	- ‘…’
+	- “…”
+	- “””…”””
+- 与数值的转换
+	- int()
+	- float()
+	- str()
+- 转义符：\\
+- 操作符： 
+	- +
+	- 空格（作用与+一样）
+	- in 、not in
+	- \\\*
+	- len()
+## 常用函数
+### 查找
+```python
+s = "Hello"
+count()  # 子字符串出现的次数
+find()   # 子字符串（第一次）出现的位置，没找到 return -1
+ffind()  # 子字符串（最后一次）出现的位置，没找到 return -1
+index()  # 与 find 一样，但没找到抛出 ValueError 异常
+findex() # 同上
+```
+### 替换
+```python
+replace()     # old 替换为 new 共计 count 个
+expandtabs(8) # \t 替换为8个空格
+```
+### 转换
+```python
+upper() 	# 转大写
+lower()		# 转小写
+capitalize()	# 首字母大写
+title()			# 单词首字母大写
+swapcase()		# 大小写转向
+casefold()		# unicode 转化
+encode()		# 中文转 xx
+startswith()	# 判断是否以某个字符串开始
+endswith()		# 判断是否以某个字符串结束
+in ： 'a' in 'ab' , ab里是否包含a
+ord()		# 单个字符转码值
+```
+### 去除
+```python
+strip()		# 无参数时去除首尾空白（空格、\t、\n、\r）
+			# 有[chars]参数时，逐个去除参数里包含的内容，参数里字符顺序无影响
+lstrip()	# 左侧去除
+rstrip()	# 右侧去除
+```
+### 拆分
+```python
+splitlines()	# 拆分，返回结果为 list
+split()			# 如无参数，默认按 None（\t \r..） 拆分,有参数按参数拆分，如',' 第二个参数可以指定拆分次数 maxsplit=1
+```
+### 拼接
+```python
+join()		# 有参数，如 char list
+```
+### 排版
+```python
+center(width[,char])	# char 默认是空格
+ljust(width)			# 左对齐
+rjust(width)			# 右对齐
+zfill(3)				# 左用0补齐到3位,可批量生成文件名等
+```
+### 格式化
+```python
+format(*args,**kwargs)	# 用{}插入一个或多个占位符，将format 相应位置参数，依次放到占位符
+# python2: "%s is %d years old" % (name,age)
+# python3: "{} is {} years old".format(name,age)
+f-string				# 用法比 format 简洁
+# f'{name} is {age} years old.'
+
+# 区别：
+# format 索引顺序可以任意指定，更加灵活
+# "{0} is {1} years old".format(name,age)
+```
+### 属性判断
+```python
+# 返回布尔值
+isalnum()		# 是否是 num
+isalpha()
+isascii()
+isdecimal()
+isdigit()
+isnumeric()
+islower()
+isupper()
+istitle()
+isspace()
+isidentifier() 
+```

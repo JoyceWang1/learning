@@ -27,7 +27,7 @@
 	# 加入缓存区
 	git add README.md
 	# 本地提交
-		git commit -m "by Joyce"
+	git commit -m "by Joyce"
 	```
 2. 远程
 	```bash

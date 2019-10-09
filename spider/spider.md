@@ -42,6 +42,7 @@ bs_obj = BeautifulSoup(要解析的文本,'解析器')
 
 ### 2. 提取数据`BeautifulSoup`
 关键知识点：
+
 | 方法 | 作用 | 用法 |示例 |
 |:----|:----|:----|:----|
 | `find()`| 提取满足要求的**首个**数据 | `bs_obj.find(标签,属性)` | `soup.find('div',class_='books')` |

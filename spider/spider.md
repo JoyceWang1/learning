@@ -37,21 +37,37 @@ bs 不是标准库，需要安装：`pip3 install BeautifulSoup4` ，查看`pip 
 # 解析数据
 # 『要解析的文本』 必须必须是字符串
 # 『解析器』 简单的是内置 htmp.parser
-bs_obj = BeautifulSoup(要解析的文本,'解析器')
+# bs_obj = BeautifulSoup(要解析的文本,'解析器')
+bs = BeautifulSoup(res.text,'html.parser')
 ```
 
 ### 2. 提取数据`BeautifulSoup`
 关键知识点：
 
-| 方法 | 作用 | 用法 |示例 |
-|:----|:----|:----|:----|
-| `find()`| 提取满足要求的**首个**数据 | `bs_obj.find(标签,属性)` | `soup.find('div',class_='books')` |
-| `find_all()`| 提取满足要求的** 所有**数据 | `bs_obj.find_all(标签,属性)` | `soup.find_all('div',class_='books')` |
+1. `find/find_all`
+
+| 方法 | 作用 | 用法 |示例 | 返回值对象 |
+|:----|:----|:----|:----|:----|
+| `find()`| 提取满足要求的**首个**数据 | `bs_obj.find(标签,属性)` | `soup.find('div',class_='books')` | Tag |
+| `find_all()`| 提取满足要求的** 所有**数据 | `bs_obj.find_all(标签,属性)` | `soup.find_all('div',class_='books')` | ResultSet |
+
+注：
+- `class_`是为了区分 Python 的 class
+- 标签和属性可以任选其一，也可以一起使用
 
 ```python
 # 提取数据
 # 2大知识点： find() 与 find_all() 、Tag 对象
+item = bs.find('div')
 ```
+
+2. `Tag`
+
+| 属性/方法 | 作用 |
+|:----|:----|
+| `Tag.find()` 和 `Tag.find_all()` | 提取 Tag 中的 Tag |
+| `Tag.text` | 提取 Tag 中的文字 |
+| `Tag['属性名']` | 输入参数：属性名，可以提取 Tag 中这个属性的值 |
 
 ## 爬虫伦理
 `Robots`协议：互联网爬虫工人的道德规范，全程为『网络爬虫排除标准』Rotots exclusion protocol ，网站会告诉爬虫哪些可以抓取，哪些不可以。

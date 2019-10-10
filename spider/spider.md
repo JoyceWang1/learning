@@ -9,8 +9,7 @@
 > - BeautifulSoup 对象 -\> Tag 对象
 
 
-\<img src="../spiderimg.png" width="50%"\>
-![ spiderimg.png ]()(../img/spiderimg.png)
+![ spiderimg.png ]()([../img/spiderimg.png][1])
 
 ### 0. 获取数据`Requests`
 Python 实现的话，基础库：requests
@@ -108,6 +107,8 @@ Allow: /$
 Disallow:  / # 禁止访问除 Allow 规定页面之外的其他所有页面
 ```
 
+[1]:	https://github.com/JoyceWang1/learning/blob/master/img/spiderimg.png
 [2]:	https://localprod.pandateacher.com/python-manuscript/crawler-html/exercise/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81.md
 [3]:	http://baidu.com/robots.txt
 [4]:	https://www.taobao.com/robots.txt
+

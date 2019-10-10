@@ -9,7 +9,7 @@
 > - BeautifulSoup 对象 -\> Tag 对象
 
 
-![ spiderimg]()([https://raw.githubusercontent.com/JoyceWang1/learning/master/img/spiderimg.png][1])
+![spider1]()([https://raw.githubusercontent.com/JoyceWang1/learning/master/img/spiderimg.png][2])
 
 ### 0. 获取数据`Requests`
 Python 实现的话，基础库：requests
@@ -35,7 +35,7 @@ if res.status_code == 200:
 # response.text	# 返回数据转化为字符串
 # response.encoding	# res 对象的编码
 ```
-[HTTP 返回码][2]
+[HTTP 返回码][3]
 ### 1. 解析数据`BeautifulSoup`
 > 解析数据：读懂 html
 bs 不是标准库，需要安装：`pip3 install BeautifulSoup4` ，查看`pip list |grep -i Beau`
@@ -80,8 +80,8 @@ item = bs.find('div')
 ## 爬虫伦理
 `Robots`协议：互联网爬虫工人的道德规范，全程为『网络爬虫排除标准』Rotots exclusion protocol ，网站会告诉爬虫哪些可以抓取，哪些不可以。
 Robots 详情：`域名 + /robots.txt` ，比如：
-- [https://baidu.com/robots.txt][3]
-- [https://www.taobao.com/robots.txt][4]
+- [https://baidu.com/robots.txt][4]
+- [https://www.taobao.com/robots.txt][5]
 Robots 参数：
 - `Allow`  允许被访问
 - `Disallow` 不允许被访问
@@ -107,8 +107,7 @@ Allow: /$
 Disallow:  / # 禁止访问除 Allow 规定页面之外的其他所有页面
 ```
 
-[1]:	https://raw.githubusercontent.com/JoyceWang1/learning/master/img/spiderimg.png
-[2]:	https://localprod.pandateacher.com/python-manuscript/crawler-html/exercise/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81.md
-[3]:	http://baidu.com/robots.txt
-[4]:	https://www.taobao.com/robots.txt
-
+[2]:	https://raw.githubusercontent.com/JoyceWang1/learning/master/img/spiderimg.png
+[3]:	https://localprod.pandateacher.com/python-manuscript/crawler-html/exercise/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81.md
+[4]:	http://baidu.com/robots.txt
+[5]:	https://www.taobao.com/robots.txt

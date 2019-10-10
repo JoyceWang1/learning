@@ -3,6 +3,15 @@
 0.获取数据 -\> 1.解析数据 -\> 2.提取数据 -\> 3.存储数据
 
 ## 基本示例
+> 操作对象的变化：
+> - URL -\> Response 对象 -\> 字符串(html) -\> BeautifulSoup 对象
+> - BeautifulSoup 对象 -\> list -\> Tag 对象
+> - BeautifulSoup 对象 -\> Tag 对象
+
+
+\<img src="../spiderimg.png" width="50%"\>
+![ spiderimg.png ]()(../img/spiderimg.png)
+
 ### 0. 获取数据`Requests`
 Python 实现的话，基础库：requests
 ```python
@@ -27,7 +36,7 @@ if res.status_code == 200:
 # response.text	# 返回数据转化为字符串
 # response.encoding	# res 对象的编码
 ```
-[HTTP 返回码][1]
+[HTTP 返回码][2]
 ### 1. 解析数据`BeautifulSoup`
 > 解析数据：读懂 html
 bs 不是标准库，需要安装：`pip3 install BeautifulSoup4` ，查看`pip list |grep -i Beau`
@@ -72,8 +81,8 @@ item = bs.find('div')
 ## 爬虫伦理
 `Robots`协议：互联网爬虫工人的道德规范，全程为『网络爬虫排除标准』Rotots exclusion protocol ，网站会告诉爬虫哪些可以抓取，哪些不可以。
 Robots 详情：`域名 + /robots.txt` ，比如：
-- [https://baidu.com/robots.txt][2]
-- [https://www.taobao.com/robots.txt][3]
+- [https://baidu.com/robots.txt][3]
+- [https://www.taobao.com/robots.txt][4]
 Robots 参数：
 - `Allow`  允许被访问
 - `Disallow` 不允许被访问
@@ -99,6 +108,6 @@ Allow: /$
 Disallow:  / # 禁止访问除 Allow 规定页面之外的其他所有页面
 ```
 
-[1]:	https://localprod.pandateacher.com/python-manuscript/crawler-html/exercise/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81.md
-[2]:	http://baidu.com/robots.txt
-[3]:	https://www.taobao.com/robots.txt
+[2]:	https://localprod.pandateacher.com/python-manuscript/crawler-html/exercise/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81.md
+[3]:	http://baidu.com/robots.txt
+[4]:	https://www.taobao.com/robots.txt

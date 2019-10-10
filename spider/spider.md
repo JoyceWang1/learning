@@ -9,7 +9,7 @@
 > - BeautifulSoup 对象 -\> Tag 对象
 
 
-![ spiderimg.png ]()([../img/spiderimg.png][1])
+![ spiderimg.png ]()([https://github.com/JoyceWang1/learning/blob/master/img/spiderimg.png][1])
 
 ### 0. 获取数据`Requests`
 Python 实现的话，基础库：requests

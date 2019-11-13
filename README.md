@@ -3,9 +3,9 @@
 
 ## 目录
 > - Git
-> - Python
+> - Python ：编程基础学习
 > - Reading : 读书笔记
 > - caseStudy : 目标制定与复盘 review
-> - Study : 知识付费相关内容 
+> - Study : 知识付费 / 通识学习 相关内容 
 > - Spider : 爬虫相关
 > - img : 笔记中引用的图片

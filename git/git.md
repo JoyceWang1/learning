@@ -18,6 +18,8 @@
 	git remote add origin https://github.com/JoyceWang1/learning.git
 	# 提交到远程
 	git push -u origin master
+	# 检查远程更新
+	git fetch upstream
 	# 查看远程仓库
 	git remote -v
 	```
@@ -31,6 +33,8 @@
 	```
 2. 远程
 	```bash
+	# 检查远程更新
+	git fetch upstream
 	# 提交远程
 	git push -u origin master
 	```
@@ -44,3 +48,20 @@ git commit -m 'update .gitignore'
 ```
 
 [1]:	https://github.com/JoyceWang1
+
+## 慢的问题
+
+解决国内慢的问题
+
+````````bash
+# 访问：http://github.global.ssl.fastly.net.ipaddress.com/#ipinfo 获取CDNip和域名
+eg：199.232.69.194 https://github.global.ssl.fastly.net
+
+# 访问：https://github.com.ipaddress.com/#ipinfo 获取CDNip和域名
+eg：140.82.114.4 http://github.com
+
+sudo vi /etc/hosts
+199.232.69.194 https://github.global.ssl.fastly.net
+140.82.114.4 http://github.com
+````````
+

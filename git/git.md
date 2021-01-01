@@ -38,7 +38,23 @@
 	# 提交远程
 	git push -u origin master
 	```
+3. fork 更新
+
+   ```bash
+   # 添加 upstream 源 URL
+   git remote add upstream URL
+   # fetch  和 merge master 分支
+   git fetch upstream
+   git merge upstream/master
+   
+   # 提交到远程
+   git push -u origin master
+   ```
+
+4. 
+
 ##  忽略提交
+
 `.gitignore`只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。
 解决方法就是先把本地缓存删除（改变成未track状态），然后再提交:
 ```bash

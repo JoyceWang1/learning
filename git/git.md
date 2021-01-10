@@ -16,8 +16,14 @@
 	```bash
 	# 添加远程
 	git remote add origin https://github.com/JoyceWang1/learning.git
+	# 添加 fork
+	git remote add upstream https://github.com/xiaolai/learning.git
+	# 合并 upstream master
+	git merge upstream/master
+	
 	# 提交到远程
 	git push -u origin master
+	git push -u origin master:master  # 覆盖远程
 	# 检查远程更新
 	git fetch upstream
 	# 查看远程仓库
